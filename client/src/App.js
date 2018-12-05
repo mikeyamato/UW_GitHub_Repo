@@ -10,7 +10,7 @@ class App extends Component {
     console.log('**** clicked')
     axios.get('/api/profile/avatars')
       .then(res => console.log(res.data))
-      // .catch(err => console.log(err))
+      .catch(err => console.log(err))
   }
   
   render() {

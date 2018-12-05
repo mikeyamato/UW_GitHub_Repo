@@ -10,7 +10,7 @@ Requirements:
 * Do not return unnecessary data to the client application.
 * Use Vue, React, or Angular as the client framework.✅
 * Use Bootstrap for UI components.✅
-* Start with repository 1000.
+* Start with repository 1000.✅
 * Try to fit as many avatars on one screen as possible. (i.e. Without scrolling.)
 * The application should run on localhost with the “npm start” command.✅
 
