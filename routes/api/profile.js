@@ -9,7 +9,6 @@ router.get('/avatars', (req, res) => {
 	let mainArr = [];
 	
 	octokit.repos.listPublic({
-		per_page: '20',
 		since: '1000'
 	}).then(results=>{
 		for (let eachObj of results.data) {
@@ -29,11 +28,11 @@ router.get('/avatars', (req, res) => {
 					for (let eachObj of results.data) {
 						followers.push(eachObj.login)
 					}
-					regArr.push(followers)  // TODO: names of all followers and ...
+					regArr.push(followers)  // names of all followers
 					// console.log('**** regArr', regArr)
 					mainArr.push(regArr)
 					// console.log('**** mainArr', mainArr)
-					console.log('***** A name')
+					console.log('***** "a" name')
 				})
 				.catch(err => res.status(404).json({error: 'something went wrong'}))
 			}
@@ -46,7 +45,7 @@ router.get('/avatars', (req, res) => {
 			// console.log('**** regArr', regArr)
 		}
 		// console.log('***** mainArr',mainArr)
-		console.log('********************************************************* this hits')
+		console.log('*********************** this hits BUT before "a" name is compiled???')
 		res.send(mainArr)
 	})
 	.catch(err => res.status(404).json({error: 'something went wrong'}))
