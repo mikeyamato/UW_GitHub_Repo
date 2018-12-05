@@ -25,6 +25,9 @@ For owners with logins that start with a or A, display a list of the repository 
 ```sh
 $ cd $REPO_ROOT
 $ npm install
+$ cd client
+$ npm install
+$ cd ..
 $ npm start
 ```
 ## Personal Notes
